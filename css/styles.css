@@ -150,6 +150,9 @@ header {
 }
 
 .contact-link {
+    display: block;
+    display: flex;
+    align-items: center;
     font-weight: 500;
     font-size: 14px;
     line-height: 1.14;
@@ -158,11 +161,7 @@ header {
     text-decoration: none;
     color: var(--secondary-text-color);
     fill: var(--secondary-text-color);
-}
 
-.contact-section {
-    display: flex;
-    align-items: center;
     transition:
         fill 250ms var(--main-transition-time),
         color 250ms var(--main-transition-time);
@@ -571,7 +570,8 @@ header {
     transition: box-shadow 250ms var(--main-transition-time);
 }
 
-.example-card-link:hover {
+.example-card-link:hover,
+.example-card-link:focus {
     box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06), 1px 4px 6px rgba(0, 0, 0, 0.16);
 }
 
@@ -593,7 +593,8 @@ header {
     transition: transform 250ms var(--main-transition-time);
 }
 
-.example-card:hover .overlay {
+.example-card-link:hover .overlay,
+.example-card-link:focus .overlay {
     transform: translateY(0);
 }
 
